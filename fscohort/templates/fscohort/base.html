@@ -28,15 +28,10 @@
 
   <body>
     {% comment %} {% include "users/navbar.html" %} {% endcomment %}
-    <div style="margin-top: 100px; margin-bottom: 100px" class="container">
-      {% if messages %} {% for message in messages %} {% if message.tags ==
-      "error" %}
-      <div class="alert alert-danger">{{ message }}</div>
-      {% else %}
-      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
-      {% endif %} {% endfor %} {% endif %} {% block container %}{% endblock
-      container %}
-    </div>
+    <div
+      style="margin-top: 100px; margin-bottom: 100px"
+      class="container"
+    ></div>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
