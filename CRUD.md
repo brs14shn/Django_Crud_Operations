@@ -47,8 +47,8 @@ SECRET_KEY = config('SECRET_KEY')
 go to terminal
 
 ```bash
-py manage.py migrate
-py manage.py runserver
+python manage.py migrate
+python manage.py runserver
 ```
 
 click the link with CTRL key pressed in the terminal and see django rocket.
@@ -56,7 +56,7 @@ click the link with CTRL key pressed in the terminal and see django rocket.
 go to terminal, stop project, add app
 
 ```
-py manage.py startapp fscohort
+python manage.py startapp fscohort
 ```
 
 go to settings.py and add 'fscohort' app to installed apps and add below lines
