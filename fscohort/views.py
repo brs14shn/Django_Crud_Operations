@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect
+from django.contrib import messages
 from .models import Student
 from .forms import StudentForm
 
@@ -25,6 +26,7 @@ def student_add(request):
         form=StudentForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, "Student saved successfully")
             return redirect("list")
     context={
         "form":form
