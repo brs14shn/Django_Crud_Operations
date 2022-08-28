@@ -1,13 +1,15 @@
 from django.shortcuts import render,redirect
 from .models import Student
 from .forms import StudentForm
-from django.contrib import messages
 
 # Create your views here.
 
 def index(request):
     return render(request,"fscohort/index.html")
 
+#----------------CRUD-----------------#
+
+#! GET(READ)
 def student_list(request):
    students=Student.objects.all()
    context={
@@ -23,7 +25,6 @@ def student_add(request):
         form=StudentForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, "Student added successful")
             return redirect("list")
     context={
         "form":form
