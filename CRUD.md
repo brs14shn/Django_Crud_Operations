@@ -3,7 +3,7 @@
 ```bash
 # CREATING VIRTUAL ENVIRONMENT
 # windows
-py -m venv env
+python -m venv env
 # windows other option
 python -m venv env
 # linux / Mac OS
@@ -80,8 +80,8 @@ class Student(models.Model):
 go to terminal
 
 ```bash
-py manage.py makemigrations
-py manage.py migrate
+python manage.py makemigrations
+python manage.py migrate
 python manage.py createsuperuser
 ```
 
